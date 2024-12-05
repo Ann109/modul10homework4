@@ -26,8 +26,6 @@ class Cafe:
 
     def guest_arrival(self, *guests):
         for guest in guests:
-            # TODO: Не проверять каждый раз свободный стол, а просто запихнуть 5 гостей за столы,
-            # а потом в очередь
             free_table = next((x for x in self.tables if x.guest is None), None)
             if free_table is not None:
                 free_table.guest = guest
